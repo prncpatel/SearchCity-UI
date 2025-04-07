@@ -14,20 +14,20 @@ export const Table = ({ search, isLoading, data }) => {
                 {
                     !search && !isLoading && (
                         <tr>
-                            <td colSpan="3">Start Searching</td>
+                            <td colSpan="3" className="table-empty">Start Searching</td>
                         </tr>
                     )
                 }
                 {
                     isLoading && (
                         <tr>
-                            <td colSpan="3">Loading...</td>
+                            <td colSpan="3" className="table-empty">Loading...</td>
                         </tr>
                     )}
                 {
                     search && !isLoading && data.length === 0 && (
                         <tr>
-                            <td colSpan="3">No data found</td>
+                            <td colSpan="3" className="table-empty">No data found</td>
                         </tr>
                     )
                 }
